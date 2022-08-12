@@ -1,0 +1,73 @@
+---
+title: "Correlation Analysis"
+author: "Puriwat Sangrawee"
+date: '2022-07-18'
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+# Hello World
+
+## R is very cool
+
+This paper will analyze mtcars dataframe and find relationship between wt , hp and mpg variables.
+
+- explore data 
+- descriptive analysis
+- correlation matrix
+
+IF ECHO = FALSE , only result would be shown
+
+```{r echp = FALSE}
+head(mtcars)
+
+
+```
+
+
+## Explore data set
+
+> Live as if you were to die today. Learn as if you were to live forever.
+
+## summary Statistics
+```{r}
+   summary(mtcars)
+   
+```
+
+## Correlation Analysis
+
+```{r}
+   library(dplyr)
+df <- mtcars %>% select(wt , hp , mpg)
+cor(df)
+  
+```
+
+Add some plots
+```{r}
+library(ggplot2)
+ggplot(df , aes(wt ,mpg)) + 
+  geom_point() + 
+  theme_minimal()
+```
+
+Python code in R
+
+```{python}
+
+print("hello World")
+
+```
+
+
+
+
+
+
+
+
+
+
